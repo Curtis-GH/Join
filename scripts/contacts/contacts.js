@@ -326,7 +326,7 @@ async function deleteContact(id, event) {
   disableButtonWhileLoading("btn-cancel");
   let isUser = await checkIfIdIsUser(id);
   let path = isUser ? `users/${id}` : `contacts/${id}`;
-  let url = `https://join-50921-default-rtdb.europe-west1.firebasedatabase.app/${path}.json`;
+  let url = `https://final-join-default-rtdb.firebaseio.com/${path}.json`;
   await fetch(url, { method: "DELETE" });
   closeContactDetails();
   document.getElementById("contact-detail-content").innerHTML = "";
@@ -343,7 +343,7 @@ async function deleteContact(id, event) {
  */
 async function checkIfIdIsUser(id) {
   let response = await fetch(
-    `https://join-50921-default-rtdb.europe-west1.firebasedatabase.app/users/${id}.json`,
+    `https://final-join-default-rtdb.firebaseio.com/users/${id}.json`,
   );
   let data = await response.json();
   return data !== null;
