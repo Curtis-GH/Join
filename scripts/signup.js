@@ -1,5 +1,5 @@
 const BASE_URL =
-  "https://join-50921-default-rtdb.europe-west1.firebasedatabase.app";
+  "https://final-join-default-rtdb.firebaseio.com/";
 
 const AVATAR_COLORS = [
   "#FF7A00", "#1FD7C1", "#462F8A", "#9327FF",
